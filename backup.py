@@ -22,7 +22,9 @@ def backup(filepaths):
 	timestr = "{hour:02}{minute:02}".format(hour=dt.hour, minute=dt.minute)
 
 	# do dirs corresopnding to today's date exist?
-	backups_path = '/home/alex/backups/'
+	# TODO: use ~ for homedir name?
+	# backups_path = '/home/alex/backups/'
+	backups_path = '/Users/apearson/backups/'
 
 	if not os.path.isdir(backups_path + datestr):
 	  os.mkdir(backups_path + datestr)
