@@ -1,9 +1,11 @@
 // json formatter script
 // for now, to be used in tandem with Sublime Text autoformat
+// (somewhat obsoleted by python -m json.tool)
 
 var fs = require('fs');
 
 // This code style is not at all flashy at present. That's fine.
+// Could be improved by using a stack
 
 var whitespace = [' ', '\t', '\n'];
 
