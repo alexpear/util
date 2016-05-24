@@ -13,7 +13,7 @@ def trash (name):
             + '" to trash\''
         )
     else:
-        print('error: ', os.path.abspath(name), ' does not exist')
+        print('error: ' + os.path.abspath(name) + ' does not exist')
 
 # run cli script
 if sys.platform != 'darwin':
