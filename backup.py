@@ -18,6 +18,7 @@ def backup(filepaths):
 			return
 
 	dt = datetime.datetime.now()
+
 	# TODO: year support
 	datestr = "{month:02}{day:02}".format(month=dt.month, day=dt.day)
 	timestr = "{hour:02}{minute:02}".format(hour=dt.hour, minute=dt.minute)
