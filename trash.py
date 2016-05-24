@@ -5,13 +5,19 @@
 import os
 import sys
 
-if len(sys.argv) > 1:
+def trash (name):
+    if os.path.exists(name):
+        os.system('osascript -e \'tell app "Finder" to move the POSIX file "'
+            + os.path.abspath(name) + '" to trash\'')
+    else:
+        print('error: ', os.path.abspath(name), ' does not exist')
+
+# run cli script
+if sys.platform != 'darwin':
+    print('error: this script only supports Mac OSX darwin')
+elif len(sys.argv) > 1:
     for arg in sys.argv[1:]:
-        if os.path.exists(arg) and (sys.platform == 'darwin'):
-            os.system('osascript -e \'tell app "Finder" to move the POSIX file "'
-            	+ os.path.abspath(arg) + '" to trash\'')
-        else:
-            print 'Error: ', os.path.abspath(arg), ' does not exist'
+        trash(arg)
 else:
     print 'usage: trash [file...]'
     print '  move file(s) to OSX Trash'
