@@ -11,6 +11,7 @@ def backup(filepaths):
         print('usage: backup filepath...')
         return
 
+    # TODO: Ability to fail one filename without ceasing whole script.
     # check the relative path(s) are legit
     for filepath in filepaths:
         if not os.path.exists(filepath):
@@ -35,6 +36,7 @@ def backup(filepaths):
 
     for filepath in filepaths:
         if os.path.exists(desired_path + os.path.basename(filepath)):
+            # TODO: Do not print smiley face at end if anything fails to backup
             # if already exists in backups dir...
             print('ERROR: file "{file}" already backed up here, not overwriting'.format(file=filepath))
             continue
