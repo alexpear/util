@@ -19,5 +19,5 @@ elif len(sys.argv) > 1:
     for arg in sys.argv[1:]:
         trash(arg)
 else:
-    print 'usage: trash [file...]'
-    print '  move file(s) to OSX Trash'
+    print('usage: trash [file...]')
+    print('  move file(s) to OSX Trash')
