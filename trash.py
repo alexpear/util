@@ -7,8 +7,11 @@ import sys
 
 def trash (name):
     if os.path.exists(name):
-        os.system('osascript -e \'tell app "Finder" to move the POSIX file "'
-            + os.path.abspath(name) + '" to trash\'')
+        os.system(
+            'osascript -e \'tell app "Finder" to move the POSIX file "'
+            + os.path.abspath(name)
+            + '" to trash\''
+        )
     else:
         print('error: ', os.path.abspath(name), ' does not exist')
 
