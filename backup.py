@@ -25,7 +25,7 @@ def backup(filepaths):
     timestr = "{hour:02}{minute:02}".format(hour=dt.hour, minute=dt.minute)
 
     # do dirs corresopnding to today's date exist?
-    backups_path = os.path.expanduser('~/backups/')
+    backups_path = os.path.expanduser('~/backup/')
 
     if not os.path.isdir(backups_path + yearstr):
         os.mkdir(backups_path + yearstr)
